@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html, body, #root, .body, .content {
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+.body {
+    display: flex;
+    position: relative;
+}
+
+/*Scrollbar styled*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5E62FF;
+}
+
+.white-filter-img {
+    filter:  brightness(0) invert(1);
+}
+
+.caption-element {
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.caption-element:hover .caption-text{
+    opacity: 1;
+}
+
+.caption-element:hover img{
+    opacity: 1;
+    transform: scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+    -ms-transform:scale(1.15,1.15);
+    -o-transform:scale(1.15,1.15);
+}
+.caption-element img{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    z-index: 0;
+}
+.caption-element .caption-text{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
+}
+.caption-element img{
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    -ms-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+}
+.caption-element .blur-effect{
+    background-color: rgba(0,0,0,0.65);
+    height: 300px;
+    width: 400px;
+    z-index: 5;
+    position: absolute;
+}
+.caption-element .caption-info h2{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.caption-element .caption-info{
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    text-align: center;
+    top: 100px;
+}
+
